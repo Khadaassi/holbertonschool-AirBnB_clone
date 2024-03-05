@@ -11,18 +11,18 @@
 ----------
 
 ## ➤ Menu:
+
 * [➤ Description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-description)
-* [➤ Console:]()
- * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
- * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
- * [➤ Librairies](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-librairies)
+* [➤ Console](https://github.com/Khadaassi/holbertonschool-AirBnB_clone?tab=readme-ov-file#-console)
+  * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
+  * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
 * [➤ Files description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-files-description)
 * [➤ Tests](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-tests)
-* [➤ Man](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-man)
+* [➤ Commands](https://github.com/Khadaassi/holbertonschool-AirBnB_clone?tab=readme-ov-file#-commands)
 * [➤ Resources](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-resources)
 * [➤ General](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-general)
 * [➤ Requirements](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-requirements)
-* [➤ Author](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-author)
+* [➤ Authors](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-author)
 * [➤ License](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-license)
 
 ----------
@@ -31,7 +31,7 @@
 
 ----------
 
-### ➤ Console:
+## ➤ Console:
 
  ➤ If you want to use our the console AirBnB clone :
 
