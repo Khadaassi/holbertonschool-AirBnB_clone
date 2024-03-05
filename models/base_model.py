@@ -6,7 +6,6 @@ import uuid
 import datetime
 import models
 
-
 class BaseModel:
     """Base class for AirBnB clone"""
 
