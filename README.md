@@ -1,7 +1,7 @@
 ### holbertonschool-AirBnB_clone
 
 <p align="center">
-    <img [AirBnB clone - The console] src="#TODO: add image">
+    <img [AirBnB clone - The console] src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/AirBnB_clone_The_console.png?raw=true">
 </p>
 
 ----------
@@ -11,12 +11,20 @@
 ----------
 
 ## ➤ Menu:
-* [➤ Description]()
-* [➤ Concepts]()
-* [➤ Resources]()
-* [➤ Requirements]()
-* [➤ Tasks]()
-* [➤ Author]()
+* [➤ Description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-description)
+* [➤ Flowchart](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-flowchart)
+* [➤ If you want to use our the console AirBnB clone](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-if-you-want-to-use-our-the-console-airbnb-clone-)
+ * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
+ * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
+ * [➤ Librairies](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-librairies)
+* [➤ Files description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-files-description)
+* [➤ Tests](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-tests)
+* [➤ Man](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-man)
+* [➤ Resources](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-resources)
+* [➤ General](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-general)
+* [➤ Requirements](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-requirements)
+* [➤ Author](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-author)
+* [➤ License](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-license)
 
 ----------
 
