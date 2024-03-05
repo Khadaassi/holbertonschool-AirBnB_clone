@@ -852,9 +852,12 @@ Repo:
 
 ## ➤ Author:
 
-- Khadija Aassi <a href="https://github.com/Khadaassi">
- <img src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/logo_github.png?raw=true" />
-</a>
+<p align="center">
+<a href="https://github.com/Khadaassi">
+ <img src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/raw/main/logo_github.png?raw=true" />
+</a> 
+<p align="center">Khadija Aassi</p>
+
 
 [Github](https://github.com/Khadaassi)
 - Amandine Kemp [Github](https://github.com/amandinekemp)
