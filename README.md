@@ -13,7 +13,7 @@
 ## ➤ Menu:
 * [➤ Description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-description)
 * [➤ Flowchart](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-flowchart)
-* [➤ If you want to use our the console AirBnB clone](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-if-you-want-to-use-our-the-console-airbnb-clone-)
+* [➤ Console:]()
  * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
  * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
  * [➤ Librairies](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-librairies)
@@ -32,13 +32,9 @@
 
 ----------
 
-## ➤ Flowchart:
+### ➤ Console:
 
-![➤ Flowchart ➤](#TODO)
-
-----------
-
-## ➤ If you want to use our the console AirBnB clone :
+ ➤ If you want to use our the console AirBnB clone :
 
 ### ➤ Install:
 To use our the console AirBnB clone you can clone this repository:<br>
@@ -48,21 +44,7 @@ To use our the console AirBnB clone you can clone this repository:<br>
 ### ➤ Execute:
 To run our the console AirBnB clone:<br>
 
-  ```./#TODO```
-
-### ➤ Librairies:
-#TODO
-- ```#include <stdarg.h>```
-- ```#include <signal.h>```
-- ```#include <stdio.h>```
-- ```#include <stdlib.h>```
-- ```#include <string.h>```
-- ```#include <unistd.h>```
-- ```#include <sys/types.h>```
-- ```#include <sys/wait.h>```
-- ```#include <sys/stat.h>```
-- ```#include <fcntl.h>```
-- ```#include <errno.h>```
+  ```$ ./console.py```
 
 ----------
 
@@ -165,12 +147,20 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 
 ----------
 
-## ➤ Man:
+## ➤ Commands:
 
-* Read the man using :<br>
+#TODO
 
-  ```man ./#TODO```
-
+| Command | Description | 
+| -------- | -------- |
+| []()    |     |
+| []()    |     |
+| []()    |     |
+| []()    |     |
+| []()    |     |
+| []()    |     |
+| []()    |     |
+| []()    |     |
 
 ## ➤ Resources:
 Read or watch:
@@ -862,7 +852,11 @@ Repo:
 
 ## ➤ Author:
 
-- Khadija Aassi [Github](https://github.com/Khadaassi)
+- Khadija Aassi <a href="https://github.com/Khadaassi">
+ <img src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/logo_github.png?raw=true" />
+</a>
+
+[Github](https://github.com/Khadaassi)
 - Amandine Kemp [Github](https://github.com/amandinekemp)
 
 ----------
