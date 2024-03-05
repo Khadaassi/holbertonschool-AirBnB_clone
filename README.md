@@ -157,7 +157,7 @@ guillaume@ubuntu:~/AirBnB$
 
 All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest discover tests" | bash`
 
-![console](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240305%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240305T081124Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a18dca66f061573ea5bfa72234f05b893bdec21735c6897c1e407c4658178712)
+[console](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240305%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240305T081124Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a18dca66f061573ea5bfa72234f05b893bdec21735c6897c1e407c4658178712)
 
 [Video ➤ HBNB- The console](https://youtu.be/p00ES-5K4C8)
 
