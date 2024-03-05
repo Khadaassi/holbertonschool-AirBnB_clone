@@ -12,7 +12,6 @@
 
 ## ➤ Menu:
 * [➤ Description](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-description)
-* [➤ Flowchart](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-flowchart)
 * [➤ Console:]()
  * [➤ Install](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-install)
  * [➤ Execute](https://github.com/Khadaassi/holbertonschool-AirBnB_clone#-execute)
@@ -850,7 +849,7 @@ Repo:
 
 ----------
 
-## ➤ Author:
+## ➤ Authors:
 
 <p align="center">
 <a href="https://github.com/Khadaassi">
@@ -858,9 +857,11 @@ Repo:
 </a> 
 <p align="center">Khadija Aassi</p>
 
-
-[Github](https://github.com/Khadaassi)
-- Amandine Kemp [Github](https://github.com/amandinekemp)
+<p align="center">
+<a href="https://github.com/amandinekemp">
+ <img src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/raw/main/logo_github.png?raw=true" />
+</a> 
+<p align="center">Amandine Kemp</p>
 
 ----------
 
