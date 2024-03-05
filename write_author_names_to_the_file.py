@@ -3,7 +3,7 @@
 # See hack/generate-authors.sh to make modifications.
 
 # Open the file in write mode
-with open('AUTHORS.txt', 'w') as file:
+with open('AUTHORS', 'w') as file:
     # Write author names to the file
     file.write("Khadija Aassi\n")
     file.write("Amandine Kemp\n")
