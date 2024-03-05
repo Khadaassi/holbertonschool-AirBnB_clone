@@ -1,7 +1,7 @@
 ### holbertonschool-AirBnB_clone
 
 <p align="center">
-    <img [AirBnB clone - The console] src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/AirBnB_clone_The_console.png?raw=true">
+    <img [AirBnB clone - The console] src="https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/AirBnB_clone-The_console.png?raw=true">
 </p>
 
 ----------
