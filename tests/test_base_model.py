@@ -41,7 +41,7 @@ class testBaseModel(unittest.TestCase):
         first_updated_at = self.model.updated_at
         self.model.save()
         self.assertNotEqual(first_updated_at, self.model.updated_at)
-        #os.remove("file.json")
+        os.remove("file.json")
 
     def test_to_dict(self):
         """ Test to dict"""

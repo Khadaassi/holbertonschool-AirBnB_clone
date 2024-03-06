@@ -4,7 +4,7 @@
 
 import uuid
 from datetime import datetime
-#from models import storage
+from models import f_storage
 
 class BaseModel:
     """Base class for AirBnB clone"""
@@ -22,7 +22,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
-            #storage.new(self)
+            f_storage.new(self)
 
     def __str__(self):
         """Return string representation of BaseModel instance"""
@@ -31,7 +31,8 @@ class BaseModel:
     def save(self):
         """Update updated_at attribute with current datetime"""
         self.updated_at = datetime.now()
-        #storage.save()
+        f_storage.new(self)
+        f_storage.save()
     
     def to_dict(self):
         """Return dictionary representation of BaseModel instance"""
