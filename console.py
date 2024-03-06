@@ -1,25 +1,23 @@
 #!/usr/bin/python3
 """ Console module for AirBnB clone """
-import cmd
 
+import cmd
 class HBNBCommand(cmd.Cmd):
-    prompt = '(hbnb) '
+    prompt = "(hbnb) "
 
     def do_quit(self, arg):
-        """Exit the program"""
+        """Quit command to exit the program"""
         print("Exiting...")
         return True
 
     def do_EOF(self, arg):
-        """Exit the program"""
+        """Quit command to exit the program"""
         print("Exiting...")
         return True
-
-    def default(self, line):
-        if line.strip() == "":
-            return
-        print(f"Command not recognized: {line}")
+    
+    def emptyline(self):
+        """Do nothing when user input is empty"""
+        pass
 
 if __name__ == "__main__":
-    console = HBNBCommand()
-    console.cmdloop("Welcome to the HBNB console. Type 'quit' or 'EOF' to exit.")
+    HBNBCommand().cmdloop()
