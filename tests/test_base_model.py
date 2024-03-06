@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Unittest for BaseModel """
 
+import uuid
 import unittest
 from models.base_model import BaseModel
 from datetime import datetime
@@ -11,15 +12,20 @@ class testBaseModel(unittest.TestCase):
     """ Test class for BaseModel """
 
     def setUp(self):
-        """ Set up for test """
+        """
+        setUp permet d'initialiser tout ce que tu as besoin
+        avant chaque test grâce à la librairie unittest
+        Evite la repetition de code dans chaque test
+        """
         self.model = BaseModel()
 
     def test_init(self):
         """ Test init """
         self.assertIsInstance(self.model, BaseModel)
         self.assertIsInstance(self.model.id, str)
+        self.assertTrue(uuid.UUID(self.model.id))
         self.assertIsInstance(self.model.created_at, datetime)
-        self.assertIsInstance(self.model.updated_at, datetime)
+        self.assertEqual(self.model.updated_at, self.model.created_at)
 
     def test_str(self):
         """ Test string rep """
@@ -35,7 +41,7 @@ class testBaseModel(unittest.TestCase):
         first_updated_at = self.model.updated_at
         self.model.save()
         self.assertNotEqual(first_updated_at, self.model.updated_at)
-        os.remove("file.json")
+        #os.remove("file.json")
 
     def test_to_dict(self):
         """ Test to dict"""
@@ -45,3 +51,6 @@ class testBaseModel(unittest.TestCase):
         self.assertIn('created_at', model_dict)
         self.assertIn('updated_at', model_dict)
         self.assertIn('__class__', model_dict)
+
+if __name__ == '__main__':
+    unittest.main()
