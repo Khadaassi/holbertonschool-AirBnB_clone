@@ -17,12 +17,10 @@ class HBNBCommand(cmd.Cmd):
         """Exit the program"""
         print("Exiting...")
         return True
-
-    def default(self, line):
-        if line.strip() == "":
-            return
-        print(f"Command not recognized: {line}")
-
+    
+    def emptyline(self):
+        """Do nothing when user input is empty"""
+        pass
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
