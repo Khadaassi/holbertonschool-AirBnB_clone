@@ -12,10 +12,8 @@ from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
-    """ 
-    Handle console monitor class
-    Args:
-        cmd: cmd class inheritance
+    """
+    Command interpreter class
     """
     prompt = "(hbnb) "
 

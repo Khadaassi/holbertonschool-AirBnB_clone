@@ -13,7 +13,7 @@ import subprocess
 class TestConsole(unittest.TestCase):
     def setUp(self):
         self.console = HBNBCommand()
-        self.storage = FileStorage()
+        self.f_storage = FileStorage()
 
 
 if __name__ == '__main__':

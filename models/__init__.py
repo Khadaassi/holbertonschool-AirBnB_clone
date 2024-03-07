@@ -9,8 +9,8 @@ from models.city import City
 from models.amenity import Amenity
 from models.review import Review
 
-storage = FileStorage()
-storage.reload()
+f_storage = FileStorage()
+f_storage.reload()
 
 classes = {
     "BaseModel": BaseModel,
