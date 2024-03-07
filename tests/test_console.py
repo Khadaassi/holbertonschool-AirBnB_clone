@@ -13,9 +13,8 @@ class TestConsole(unittest.TestCase):
     def setUp(self):
         self.console = HBNBCommand()
         self.storage = FileStorage()
-
-
-
+    
+    
 
 if __name__ == '__main__':
     unittest.main()
