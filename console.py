@@ -71,7 +71,107 @@ def do_show(self, arg):
 
     print(all_objects[key])
 
+def do_destroy(self, arg):
+    """Deletes an instance based on the class name and id"""
+    args = arg.split()
 
+    if not args:
+        print("** class name missing **")
+        return
+
+    class_name = args[0]
+
+    if class_name not in classes:
+        print("** class doesn't exist **")
+        return
+
+    if len(args) < 2:
+        print("** instance id missing **")
+        return
+
+    instance_id = args[1]
+    key = "{}.{}".format(class_name, instance_id)
+    all_objects = f_storage.all()
+
+    if key not in all_objects:
+        print("** no instance found **")
+        return
+
+    del all_objects[key]
+    f_storage.save()
+
+    def do_all(self, arg):
+        """Prints all string representation of all instances"""
+        args = arg.split()
+
+        if args and args[0] not in classes:
+            print("** class doesn't exist **")
+            return
+
+        all_objects = f_storage.all()
+        instances = []
+
+        if args:
+            class_name = args[0]
+            instances = [str(obj) for key, obj in all_objects.items() if key.split('.')[0] == class_name]
+        else:
+            instances = [str(obj) for obj in all_objects.values()]
+
+        print(instances)
+
+    def do_update(self, arg):
+        """Updates an instance based on the class name and id"""
+        args = arg.split()
+
+        if not args:
+            print("** class name missing **")
+            return
+
+        class_name = args[0]
+
+        if class_name not in classes:
+            print("** class doesn't exist **")
+            return
+
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
+
+        instance_id = args[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = f_storage.all()
+
+        if key not in all_objects:
+            print("** no instance found **")
+            return
+
+        if len(args) < 3:
+            print("** attribute name missing **")
+            return
+
+        attribute_name = args[2]
+
+        if len(args) < 4:
+            print("** value missing **")
+            return
+
+        attribute_value_str = args[3]
+
+        instance = all_objects[key]
+        attribute_type = type(getattr(instance, attribute_name))
+
+        try:
+            attribute_value = attribute_type(attribute_value_str)
+        except ValueError:
+            print("** invalid value type **")
+            return
+
+        if attribute_name in ["id", "created_at", "updated_at"]:
+            print("** cannot update attribute {} **".format(attribute_name))
+            return
+
+        setattr(instance, attribute_name, attribute_value)
+        f_storage.save()
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
