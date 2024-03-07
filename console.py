@@ -104,17 +104,15 @@ def do_destroy(self, arg):
         """Prints all string representation of all instances"""
         args = arg.split()
 
-        if args and args[0] not in classes:
-            print("** class doesn't exist **")
-            return
-
-        all_objects = f_storage.all()
-        instances = []
-
         if args:
             class_name = args[0]
+            if class_name not in classes:
+                print("** class doesn't exist **")
+                return
+            all_objects = f_storage.all()
             instances = [str(obj) for key, obj in all_objects.items() if key.split('.')[0] == class_name]
         else:
+            all_objects = f_storage.all()
             instances = [str(obj) for obj in all_objects.values()]
 
         print(instances)
