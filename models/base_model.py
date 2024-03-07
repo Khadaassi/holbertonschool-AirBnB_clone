@@ -10,8 +10,12 @@ class BaseModel:
     """Base class for AirBnB clone"""
 
     def __init__(self, *args, **kwargs):
-        """Initialize class instance"""
-        """ If kwargs is not empty, set instance attributes """
+        """Initialization instance attributes
+        Args:
+             args: set of arguments
+             kwargs: set of arguments with keywords
+        """
+
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
@@ -23,21 +27,34 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = self.created_at
             from models import f_storage
+
             f_storage.new(self)
 
     def __str__(self):
-        """Return string representation of BaseModel instance"""
+        """
+        String representation of instance
+        Returns:
+            str: string representation of instance
+        """
         return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
-        """Update updated_at attribute with current datetime"""
+        """
+        Updated the public instance attribute
+        updated_at : with the current datetime.
+        """
         self.updated_at = datetime.now()
         from models import f_storage
+
         f_storage.new(self)
         f_storage.save()
 
     def to_dict(self):
-        """Return dictionary representation of BaseModel instance"""
+        """
+        Returning instance dictionnary
+        Returns:
+            dict: Instance dictionary
+        """
         new_dict = self.__dict__.copy()
         new_dict["__class__"] = self.__class__.__name__
         new_dict["created_at"] = self.created_at.isoformat()

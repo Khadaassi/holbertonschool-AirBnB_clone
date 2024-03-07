@@ -12,35 +12,29 @@ from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
-    """
-    This class contains the entry point of the command interpreter
+    """ 
+    Handle console monitor class
+    Args:
+        cmd: cmd class inheritance
     """
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
-        """
-        Exit the program
-        """
+        """Exit the program"""
         print("Exiting...")
         return True
 
     def do_EOF(self, arg):
-        """
-        Exit the program
-        """
+        """Exit the program"""
         print("Exiting...")
         return True
 
     def emptyline(self):
-        """
-        Do nothing when user input is empty
-        """
+        """Do nothing when user input is empty"""
         pass
 
     def do_create(self, arg):
-        """
-        Create a new instance of BaseModel
-        """
+        """Create a new instance of BaseModel"""
         if not arg:
             print("** class name missing **")
             return
@@ -57,10 +51,8 @@ class HBNBCommand(cmd.Cmd):
         print(new_instance.id)
 
     def do_show(self, arg):
-        """
-        Prints the string representation of an instance based on the class
-        name and id
-        """
+        """Prints the string representation of an instance based on the class
+        name and id"""
         args = arg.split()
 
         if not args:
@@ -88,9 +80,7 @@ class HBNBCommand(cmd.Cmd):
         print(all_objects[key])
 
     def do_destroy(self, arg):
-        """
-        Deletes an instance based on the class name and id
-        """
+        """Deletes an instance based on the class name and id"""
         args = arg.split()
 
         if not args:
@@ -119,9 +109,7 @@ class HBNBCommand(cmd.Cmd):
         f_storage.save()
 
     def do_all(self, arg):
-        """
-        Prints all string representation of all instances
-        """
+        """Prints all string representation of all instances"""
         all_objects = f_storage.all()
 
         if not arg:
@@ -139,9 +127,7 @@ class HBNBCommand(cmd.Cmd):
                     print(str(instance))
 
     def do_update(self, arg):
-        """
-        Updates an instance based on the class name and id
-        """
+        """Updates an instance based on the class name and id"""
         args = arg.split()
 
         if not args:
