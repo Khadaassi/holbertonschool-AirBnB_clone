@@ -12,6 +12,9 @@ from models.engine.file_storage import FileStorage
 
 
 class HBNBCommand(cmd.Cmd):
+    """
+    This class contains the entry point of the command interpreter
+    """
     prompt = "(hbnb) "
 
     def do_quit(self, arg):
