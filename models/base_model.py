@@ -4,7 +4,6 @@
 
 import uuid
 from datetime import datetime
-from models import f_storage
 
 class BaseModel:
     """Base class for AirBnB clone"""
@@ -22,6 +21,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = self.created_at
+            from models import f_storage
             f_storage.new(self)
 
     def __str__(self):
@@ -31,6 +31,7 @@ class BaseModel:
     def save(self):
         """Update updated_at attribute with current datetime"""
         self.updated_at = datetime.now()
+        from models import f_storage
         f_storage.new(self)
         f_storage.save()
     
