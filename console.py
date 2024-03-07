@@ -6,7 +6,7 @@ This module contains the entry point of the command interpreter
 
 import cmd
 import shlex
-from models import f_storage
+from models import storage
 from models import classes
 from models.engine.file_storage import FileStorage
 
@@ -69,7 +69,7 @@ class HBNBCommand(cmd.Cmd):
 
         instance_id = args[1]
         key = "{}.{}".format(class_name, instance_id)
-        all_objects = f_storage.all()
+        all_objects = storage.all()
 
         if key not in all_objects:
             print("** no instance found **")
@@ -97,18 +97,18 @@ class HBNBCommand(cmd.Cmd):
 
         instance_id = args[1]
         key = "{}.{}".format(class_name, instance_id)
-        all_objects = f_storage.all()
+        all_objects = storage.all()
 
         if key not in all_objects:
             print("** no instance found **")
             return
 
         del all_objects[key]
-        f_storage.save()
+        storage.save()
 
     def do_all(self, arg):
         """Prints all string representation of all instances"""
-        all_objects = f_storage.all()
+        all_objects = storage.all()
 
         if not arg:
             print([str(instance) for instance in all_objects.values()])
@@ -144,7 +144,7 @@ class HBNBCommand(cmd.Cmd):
 
         instance_id = args[1]
         key = "{}.{}".format(class_name, instance_id)
-        all_objects = f_storage.all()
+        all_objects = storage.all()
 
         if key not in all_objects:
             print("** no instance found **")
@@ -176,7 +176,7 @@ class HBNBCommand(cmd.Cmd):
             return
 
         setattr(instance, attribute_name, attribute_value)
-        f_storage.save()
+        storage.save()
 
 
 if __name__ == "__main__":
