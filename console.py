@@ -3,6 +3,7 @@
 """This module contains the entry point of the command interpreter"""
 
 import cmd
+import shlex
 from models import f_storage
 from models import classes
 from models.engine.file_storage import FileStorage
@@ -25,97 +26,99 @@ class HBNBCommand(cmd.Cmd):
         """Do nothing when user input is empty"""
         pass
 
-def do_create(self, arg):
-    """Create a new instance of BaseModel"""
-    if not arg:
-        print("** class name missing **")
-        return
+    def do_create(self, arg):
+        """Create a new instance of BaseModel"""
+        if not arg:
+            print("** class name missing **")
+            return
     
-    args = arg.split()
-    class_name = args[0]
+        args = arg.split()
+        class_name = args[0]
 
-    if class_name not in classes:
-        print("** class doesn't exist **")
-        return
+        if class_name not in classes:
+            print("** class doesn't exist **")
+            return
 
-    new_instance = classes[class_name]()
-    new_instance.save()
-    print(new_instance.id)
+        new_instance = classes[class_name]()
+        new_instance.save()
+        print(new_instance.id)
 
     
-def do_show(self, arg):
-    """Prints the string representation of an instance based on the class name and id"""
-    args = arg.split()
+    def do_show(self, arg):
+        """Prints the string representation of an instance based on the class name and id"""
+        args = arg.split()
 
-    if not args:
-        print("** class name missing **")
-        return
+        if not args:
+            print("** class name missing **")
+            return
 
-    class_name = args[0]
+        class_name = args[0]
 
-    if class_name not in classes:
-        print("** class doesn't exist **")
-        return
+        if class_name not in classes:
+            print("** class doesn't exist **")
+            return
 
-    if len(args) < 2:
-        print("** instance id missing **")
-        return
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
 
-    instance_id = args[1]
-    key = "{}.{}".format(class_name, instance_id)
-    all_objects = f_storage.all()
+        instance_id = args[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = f_storage.all()
 
-    if key not in all_objects:
-        print("** no instance found **")
-        return
+        if key not in all_objects:
+            print("** no instance found **")
+            return
 
-    print(all_objects[key])
+        print(all_objects[key])
 
-def do_destroy(self, arg):
-    """Deletes an instance based on the class name and id"""
-    args = arg.split()
+    def do_destroy(self, arg):
+        """Deletes an instance based on the class name and id"""
+        args = arg.split()
 
-    if not args:
-        print("** class name missing **")
-        return
+        if not args:
+            print("** class name missing **")
+            return
 
-    class_name = args[0]
+        class_name = args[0]
 
-    if class_name not in classes:
-        print("** class doesn't exist **")
-        return
+        if class_name not in classes:
+            print("** class doesn't exist **")
+            return
 
-    if len(args) < 2:
-        print("** instance id missing **")
-        return
+        if len(args) < 2:
+            print("** instance id missing **")
+            return
 
-    instance_id = args[1]
-    key = "{}.{}".format(class_name, instance_id)
-    all_objects = f_storage.all()
+        instance_id = args[1]
+        key = "{}.{}".format(class_name, instance_id)
+        all_objects = f_storage.all()
 
-    if key not in all_objects:
-        print("** no instance found **")
-        return
+        if key not in all_objects:
+            print("** no instance found **")
+            return
 
-    del all_objects[key]
-    f_storage.save()
+        del all_objects[key]
+        f_storage.save()
 
     def do_all(self, arg):
         """Prints all string representation of all instances"""
-        args = arg.split()
+        all_objects = f_storage.all()
 
-        if args:
+        if not arg:
+            print([str(instance) for instance in all_objects.values()])
+        else:
+            args = shlex.split(arg)
             class_name = args[0]
+
             if class_name not in classes:
                 print("** class doesn't exist **")
                 return
-            all_objects = f_storage.all()
-            instances = [str(obj) for key, obj in all_objects.items() if key.split('.')[0] == class_name]
-        else:
-            all_objects = f_storage.all()
-            instances = [str(obj) for obj in all_objects.values()]
 
-        print(instances)
+            for instance in all_objects.values():
+                if type(instance).__name__ == class_name:
+                    print(str(instance))
+
 
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
