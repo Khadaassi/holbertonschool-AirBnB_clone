@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+""" tests for Place creation """
+
 import unittest
 from models.place import Place
 

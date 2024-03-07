@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Amenity creation """
 
 from models.base_model import BaseModel

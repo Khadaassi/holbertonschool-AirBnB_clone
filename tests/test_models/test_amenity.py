@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Performs unit tests for the Amenity class """
 
 import unittest

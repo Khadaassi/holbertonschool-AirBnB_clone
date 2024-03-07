@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ User creation """
 
 from models.base_model import BaseModel

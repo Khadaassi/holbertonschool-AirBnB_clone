@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+"""Unittest for user"""
+
 from models.base_model import BaseModel
 from models.user import User
 import unittest
