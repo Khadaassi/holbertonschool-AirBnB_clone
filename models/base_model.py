@@ -5,6 +5,7 @@
 import uuid
 from datetime import datetime
 
+
 class BaseModel:
     """Base class for AirBnB clone"""
 
@@ -34,7 +35,7 @@ class BaseModel:
         from models import f_storage
         f_storage.new(self)
         f_storage.save()
-    
+
     def to_dict(self):
         """Return dictionary representation of BaseModel instance"""
         new_dict = self.__dict__.copy()
