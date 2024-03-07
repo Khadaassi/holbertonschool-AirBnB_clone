@@ -52,5 +52,6 @@ class testBaseModel(unittest.TestCase):
         self.assertIn('updated_at', model_dict)
         self.assertIn('__class__', model_dict)
 
+
 if __name__ == '__main__':
     unittest.main()
