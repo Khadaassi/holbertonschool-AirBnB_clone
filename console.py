@@ -21,7 +21,7 @@ class HBNBCommand(cmd.Cmd):
         """Exit the program"""
         print("Exiting...")
         return True
-    
+
     def emptyline(self):
         """Do nothing when user input is empty"""
         pass
@@ -31,7 +31,7 @@ class HBNBCommand(cmd.Cmd):
         if not arg:
             print("** class name missing **")
             return
-    
+
         args = arg.split()
         class_name = args[0]
 
@@ -43,9 +43,9 @@ class HBNBCommand(cmd.Cmd):
         new_instance.save()
         print(new_instance.id)
 
-    
     def do_show(self, arg):
-        """Prints the string representation of an instance based on the class name and id"""
+        """Prints the string representation of an instance based on the class
+        name and id"""
         args = arg.split()
 
         if not args:
@@ -119,7 +119,6 @@ class HBNBCommand(cmd.Cmd):
                 if type(instance).__name__ == class_name:
                     print(str(instance))
 
-
     def do_update(self, arg):
         """Updates an instance based on the class name and id"""
         args = arg.split()
@@ -173,6 +172,7 @@ class HBNBCommand(cmd.Cmd):
 
         setattr(instance, attribute_name, attribute_value)
         f_storage.save()
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
