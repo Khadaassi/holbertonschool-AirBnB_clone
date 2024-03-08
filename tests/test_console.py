@@ -1,20 +1,47 @@
 #!/usr/bin/python3
-
-""" Unittest for console """
+""" Unittest for BaseModel """
 
 import unittest
-from unittest.mock import patch
-from io import StringIO
-from console import HBNBCommand
-from models.engine.file_storage import FileStorage
-import subprocess
+from models.base_model import BaseModel
+from datetime import datetime
+import os
 
 
-class TestConsole(unittest.TestCase):
+class testBaseModel(unittest.TestCase):
+    """ Test class for BaseModel """
+
     def setUp(self):
-        self.console = HBNBCommand()
-        self.storage = FileStorage()
+        """ Set up for test """
+        self.model = BaseModel()
 
+    def test_init(self):
+        """ Test init """
+        self.assertIsInstance(self.model, BaseModel)
+        self.assertIsInstance(self.model.id, str)
+        self.assertIsInstance(self.model.created_at, datetime)
+        self.assertIsInstance(self.model.updated_at, datetime)
 
-if __name__ == '__main__':
-    unittest.main()
+    def test_save(self):
+        """ Test save """
+        first_updated_at = self.model.updated_at
+        self.model.save()
+        self.assertNotEqual(first_updated_at, self.model.updated_at)
+        os.remove("file.json")
+
+    def test_to_dict(self):
+        """ Test to dict"""
+        model_dict = self.model.to_dict()
+        self.assertIsInstance(model_dict, dict)
+        self.assertIn('id', model_dict)
+        self.assertIn('created_at', model_dict)
+        self.assertIn('updated_at', model_dict)
+        self.assertIn('__class__', model_dict)
+
+    def test_str(self):
+        """ Test string rep """
+        model_str = str(self.model)
+        self.assertIsInstance(model_str, str)
+        self.assertIn('[BaseModel]', model_str)
+        self.assertIn('id', model_str)
+        self.assertIn(str(self.model.id), model_str)
+        self.assertIn(str(self.model.__dict__), model_str)
