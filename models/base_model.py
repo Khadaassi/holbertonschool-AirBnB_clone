@@ -12,6 +12,7 @@ class BaseModel:
     def __init__(self, *args, **kwargs):
         """Initialize class instance"""
 
+        self.test_name = None
         if kwargs:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
