@@ -147,16 +147,16 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 
 #TODO
 
-| Command | Description | 
-| -------- | -------- |
-| []()    |     |
-| []()    |     |
-| []()    |     |
-| []()    |     |
-| []()    |     |
-| []()    |     |
-| []()    |     |
-| []()    |     |
+| Commands | Description | Exemple | Output | 
+| -------- | -------- | -------- | -------- |
+| `create`    | Create a new instance	    | create BaseModel    | 53f66ba2-66a3-4e63-816a-dd4b38017fb0    |
+| `show`    | Displays the textual representation of an instance based on the class name and associated identifier.    | show BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0    | [BaseModel] (53f66ba2-66a3-4e63-816a-dd4b38017fb0) {'id': '53f66ba2-66a3-4e63-816a-dd4b38017fb0', 'created_at': datetime.datetime(2024, 3, 8, 10, 40, 17, 384122), 'updated_at': datetime.datetime(2024, 3, 8, 10, 40, 17, 384163)}    |
+| `update`    | Modify a class instance according to a given identifier, using a key-attribute/value pair or an attribute dictionary as input.    | update BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0 email "airbnbclone@airbnbclone.com"   |     |
+| `destroy`    | Deletes an instance using the class name and associated identifier, taking into account their storage in JSON format.    | destroy BaseModel 53f66ba2-66a3-4e63-816a-dd4b38017fb0    |     |
+| `all`    | Displays the textual representation of all instances, whether based on the class name or not.    | all BaseModel	    |     |
+| `help`    | Displays available orders or communicates information    | help BaseModel	    |     |
+| `EOF`    | Exit the console use EOF, tape ctrl-D	    |     |     |
+| `quit`    | Output the prompt    |     |     |
 
 ## ➤ Resources:
 Read or watch:
