@@ -51,71 +51,15 @@ To run our the console AirBnB clone:<br>
 
 ## ➤ Files description:
 
-#TODO
-
 | Filename | Description | 
 | -------- | -------- |
-| [amenity.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)    |  This code defines an `Amenity` class which inherits from `BaseModel`. 
-
-The `Amenity` class represents an amenity or feature that is associated with a place to stay in an application like AirBnB. For example, it could be something like `Wi-Fi` or `Pool`.
-
-The `Amenity` class has a single attribute, `name`, which is initialized as an empty string. This attribute is intended to hold the name of the amenity.
-
-The `Amenity` class inherits from `BaseModel`, which means it gets all the methods and attributes of this parent class. `BaseModel` is probably a general base class for all models in this application, providing common functionality such as saving to a database or data validation.   |
-| [base_model.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/base_model.py)    |  This code defines a `BaseModel` class, which serves as the base class for the other classes in the "AirBnB clone" project. 
-
-The `BaseModel` class has a `__init__` method which initializes a new instance of the class. If arguments are passed in dictionary form (`kwargs`), they are used to define the instance's attributes. If the "created_at" or "updated_at" keys are present, their values are converted into `datetime` objects. If no argument is passed, a new unique identifier is generated and the "created_at" and "updated_at" attributes are set to the current time.
-
-The `__str__` method returns a string representation of the class instance.
-
-The `save` method updates the "updated_at" attribute with the current time and saves the instance in storage.
-
-The `to_dict` method returns a dictionary representation of the class instance. Datetime" objects are converted to strings in ISO format.   |
-| [city.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/city.py)    |  This code defines a City class that inherits from BaseModel.
-The City class represents a city in an application. It could be used to organize accommodations by city.
-The City class has two attributes, state_id and name. state_id is probably a unique identifier for the state in which the city is located, and name is the name of the city. Both attributes are initialized as empty strings.
-The City class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is probably a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
-| [place.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/place.py)    |  This code defines a `Place` class which inherits from `BaseModel`.
-
-The `Place` class represents a place to stay in an application. It will be used to store information about available places to stay.
-
-The `Place` class has several attributes:
-
-- `city_id`: a unique identifier for the city where the place is located.
-- user_id` : a unique identifier for the user who owns or manages the place.
-- name`: the name of the location.
-- description`: a description of the location.
-- `number_rooms`: the number of rooms in the location.
-- `number_bathrooms`: the number of bathrooms in the location.
-- `max_guest`: the maximum number of guests the location can accommodate.
-- `price_by_night`: the price per night for renting the venue.
-- latitude` and `longitude`: the geographical coordinates of the location.
-- `amenity_ids`: a list of identifiers for the amenities available in the location.
-
-All these attributes are initialized with default values.
-
-The `Place` class inherits from `BaseModel`, which means that it obtains all the methods and attributes of this parent class. `BaseModel` is a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
-| [review.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/review.py)    |  This code defines a Review class that inherits from BaseModel.
-The Review class represents an evaluation in an application. It is used to store user comments on hosting sites.
-The Review class has three attributes:
-place_id: a unique identifier for the place that has been reviewed.
-user_id: a unique identifier for the user who wrote the review.
-text: the text of the review.
-These three attributes are initialized as empty strings.
-The Review class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
-| [state.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/state.py)    |  This code defines a State class that inherits from BaseModel.
-The State class represents a state. It is used to organize hosting locations by state.
-The State class has a single attribute, name, which is the name of the state. This attribute is initialized as an empty string.
-The State class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
-| [user.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/user.py)    |  This code defines a User class that inherits from BaseModel.
-The User class represents a user in an application. It is used to store information about the application's users.
-The User class has four attributes:
-email: the user's e-mail address.
-password: the user's password.
-first_name: the user's first name.
-last_name: the user's surname.
-These four attributes are initialized as empty strings.
-The User class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
+| [amenity.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/amenity.py)    |  This code defines an `Amenity` class which inherits from `BaseModel`. The `Amenity` class represents an amenity or feature that is associated with a place to stay in an application like AirBnB. For example, it could be something like `Wi-Fi` or `Pool`. The `Amenity` class has a single attribute, `name`, which is initialized as an empty string. This attribute is intended to hold the name of the amenity. The `Amenity` class inherits from `BaseModel`, which means it gets all the methods and attributes of this parent class. `BaseModel` is probably a general base class for all models in this application, providing common functionality such as saving to a database or data validation.   |
+| [base_model.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/base_model.py)    |  This code defines a `BaseModel` class, which serves as the base class for the other classes in the "AirBnB clone" project. The `BaseModel` class has a `__init__` method which initializes a new instance of the class. If arguments are passed in dictionary form (`kwargs`), they are used to define the instance's attributes. If the "created_at" or "updated_at" keys are present, their values are converted into `datetime` objects. If no argument is passed, a new unique identifier is generated and the "created_at" and "updated_at" attributes are set to the current time. The `__str__` method returns a string representation of the class instance. The `save` method updates the "updated_at" attribute with the current time and saves the instance in storage. The `to_dict` method returns a dictionary representation of the class instance. Datetime" objects are converted to strings in ISO format.   |
+| [city.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/city.py)    |  This code defines a City class that inherits from BaseModel. The City class represents a city in an application. It could be used to organize accommodations by city. The City class has two attributes, state_id and name. state_id is probably a unique identifier for the state in which the city is located, and name is the name of the city. Both attributes are initialized as empty strings. The City class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is probably a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
+| [place.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/place.py)    |  This code defines a `Place` class which inherits from `BaseModel`. The `Place` class represents a place to stay in an application. It will be used to store information about available places to stay. The `Place` class has several attributes: - `city_id`: a unique identifier for the city where the place is located. - `user_id` : a unique identifier for the user who owns or manages the place. - `name`: the name of the location. - `description`: a description of the location. - `number_rooms`: the number of rooms in the location. - `number_bathrooms`: the number of bathrooms in the location. - `max_guest`: the maximum number of guests the location can accommodate. - `price_by_night`: the price per night for renting the venue. - `latitude` and `longitude`: the geographical coordinates of the location. - `amenity_ids`: a list of identifiers for the amenities available in the location. All these attributes are initialized with default values. The `Place` class inherits from `BaseModel`, which means that it obtains all the methods and attributes of this parent class. `BaseModel` is a general base class for all models in this application, providing common functionality such as database saving or data validation.   |
+| [review.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/review.py)    |  This code defines a Review class that inherits from BaseModel. The Review class represents an evaluation in an application. It is used to store user comments on hosting sites. The Review class has three attributes: `place_id`: a unique identifier for the place that has been reviewed. `user_id`: a unique identifier for the user who wrote the review. `text`: the text of the review. These three attributes are initialized as empty strings. The Review class inherits from BaseModel, which means that it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
+| [state.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/state.py)    |  This code defines a State class that inherits from BaseModel. The State class represents a state. It is used to organize hosting locations by state. The State class has a single attribute, name, which is the name of the state. This attribute is initialized as an empty string. The State class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
+| [user.py](https://github.com/Khadaassi/holbertonschool-AirBnB_clone/blob/main/models/user.py)    |  This code defines a User class that inherits from BaseModel. The User class represents a user in an application. It is used to store information about the application's users. The User class has four attributes: `email`: the user's e-mail address. `password`: the user's password. `first_name`: the user's first name. `last_name`: the user's surname. These four attributes are initialized as empty strings. The User class inherits from BaseModel, which means it obtains all the methods and attributes of this parent class. BaseModel is a general base class for all models in this application, providing common functionality such as database saving and data validation.   |
 
 ----------
 
@@ -196,8 +140,6 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 [console](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/815046647d23428a14ca.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20240305%2Feu-west-3%2Fs3%2Faws4_request&X-Amz-Date=20240305T081124Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=a18dca66f061573ea5bfa72234f05b893bdec21735c6897c1e407c4658178712)
 
 [Video ➤ HBNB- The console](https://youtu.be/p00ES-5K4C8)
-
-#TODO: add screen for tests ?
 
 ----------
 
