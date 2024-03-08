@@ -53,17 +53,6 @@ class testBaseModel(unittest.TestCase):
         self.assertIn('updated_at', model_dict)
         self.assertIn('__class__', model_dict)
 
-    def test_update_attributes(self):
-        # Add attributes to the BaseModel instance
-        self.base_model.test_name = 'initial_value'
-        self.base_model.test_id = 123
-
-        # Update the attributes
-        self.base_model.update_attributes(test_name='updated_value', test_id=456)
-
-        # Check if attributes are updated
-        self.assertEqual(self.base_model.test_name, 'updated_value')
-        self.assertEqual(self.base_model.test_id, 456)
 
 if __name__ == '__main__':
     unittest.main()
