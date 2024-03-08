@@ -44,6 +44,7 @@ class FileStorage:
                 loaded_objects = json.load(file)
                 for key, value in loaded_objects.items():
                     class_name, obj_id = key.split(".")
+                    from models.base_model import BaseModel
                     class_ = eval(class_name)
                     instance = class_(**value)
                     FileStorage.__objects[key] = instance
