@@ -145,8 +145,6 @@ All tests should also pass in non-interactive mode: `$ echo "python3 -m unittest
 
 ## ➤ Commands:
 
-#TODO
-
 | Commands | Description | Exemple | Output | 
 | -------- | -------- | -------- | -------- |
 | `create`    | Create a new instance	    | create BaseModel    | 53f66ba2-66a3-4e63-816a-dd4b38017fb0    |
