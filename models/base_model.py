@@ -45,3 +45,10 @@ class BaseModel:
         new_dict["created_at"] = self.created_at.isoformat()
         new_dict["updated_at"] = self.updated_at.isoformat()
         return new_dict
+
+    def update_attributes(self, **kwargs):
+        """Update instance attributes"""
+        for key, value in kwargs.items():
+            if key != 'id' and hasattr(self, key):
+                setattr(self, key, value)
+        self.save()
